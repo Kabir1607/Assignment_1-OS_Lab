@@ -1,7 +1,22 @@
 Task Picked: Library 
 
+Services: 2 librarians
+
 Things to do: 
 - Process Object and overall structure: (time) // look up and fill: Urvashi
 - Policy 1 (FCFS): Aarush 
 - Policy 2 (Priority Scheduling): Samar
 - Evaluation Metrics: Kabir 
+
+Process object:
+
+Field           Description
+ID Unique       identifier for the process.
+Arrival Time    The time at which the process enters the system and becomes eligible for scheduling.
+
+Priority        Scheduling priority. A lower numerical value represents a higher priority.
+
+Service Time        Total amount of execution time required by the process.
+
+Category / Type A   scenario-specific label such as VIP, Regular, Faculty, Researcher,
+etc. This is primarily descriptive unless otherwise specified.
