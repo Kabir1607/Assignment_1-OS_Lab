@@ -1,0 +1,7 @@
+Task Picked: Library 
+
+Things to do: 
+- Process Object and overall structure: (time) // look up and fill: Urvashi
+- Policy 1 (FCFS): Aarush 
+- Policy 2 (Priority Scheduling): Samar
+- Evaluation Metrics: Kabir 
