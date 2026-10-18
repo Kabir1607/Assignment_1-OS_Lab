@@ -14,7 +14,7 @@ Field           Description
 ID Unique       identifier for the process.
 Arrival Time    The time at which the process enters the system and becomes eligible for scheduling.
 
-Priority        Scheduling priority. A lower numerical value represents a higher priority.
+Priority        Scheduling priority. A lower lexiographic ordering
 
 Service Time        Total amount of execution time required by the process.
 
