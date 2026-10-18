@@ -20,5 +20,7 @@ A simple simulation of readers receiving service from librarians.
 - `src/process.h`: Defines the shared process fields, reader categories, and process states.
 - `src/fcfs.h`: Declares the FCFS function and defines its result structure.
 - `src/fcfs.cpp`: Implements FCFS for two librarians and returns each reader's start and completion times.
+- `src/priority.h`: Declares the Priority Scheduling function and its result structure.
+- `src/priority.cpp`: Implements Priority Scheduling for two librarians and and returns each reader's start and completion times.
 
 The full assignment specification is in [docs/OSLab_CS_3710__A1_Specifications.pdf](docs/OSLab_CS_3710__A1_Specifications.pdf).

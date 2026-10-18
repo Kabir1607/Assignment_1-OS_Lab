@@ -11,6 +11,7 @@
 #include <vector>
 
 #include "fcfs.h"
+#include "priority.h"
 #include "process.h"
 
     
