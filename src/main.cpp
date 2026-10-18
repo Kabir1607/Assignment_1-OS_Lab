@@ -17,8 +17,9 @@ class Process {
 
         // specified attributes
 
-            // process ID as nonnegative (& unsigned) integer
-            int pid;
+            // process ID as string to allow for alphanumeric IDs as per pdf
+            // break tues by lexiographic order.
+            std::string pid;
 
             // arrival time. assuming integer precision
             int arrival_time;
@@ -70,7 +71,7 @@ int main(){
     // this is how you would add a process to the queue:
     // either input the details, make the obj and then pass it
     // or just pass the details directly to the constructor like so:
-    process_queue.push(Process{1, 0, 1, 5, Process::Category::STUDENT, Process::State::NEW});
+    process_queue.push(Process{"R1", 0, 1, 5, Process::Category::STUDENT, Process::State::NEW}); // R1 is reader 1.. or process id R1
     process_queue.pop();
     return 0;
 }
