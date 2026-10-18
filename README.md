@@ -16,7 +16,9 @@ A simple simulation of readers receiving service from librarians.
 
 ## Code files
 
-- `src/main.cpp`: Creates an example reader and calls the FCFS function.
+- `src/main.cpp`: Reads the command-line arguments, loads readers, and calls the selected scheduler.
+- `src/input.h`: Declares the input-reading function.
+- `src/input.cpp`: Reads the reader records from a file and checks for an empty or unavailable file.
 - `src/process.h`: Defines the shared process fields, reader categories, and process states.
 - `src/fcfs.h`: Declares the FCFS function and defines its result structure.
 - `src/fcfs.cpp`: Implements FCFS for two librarians and returns each reader's start and completion times.
@@ -24,3 +26,13 @@ A simple simulation of readers receiving service from librarians.
 - `src/priority.cpp`: Implements Priority Scheduling for two librarians and and returns each reader's start and completion times.
 
 The full assignment specification is in [docs/OSLab_CS_3710__A1_Specifications.pdf](docs/OSLab_CS_3710__A1_Specifications.pdf).
+
+## Compile and run
+
+```bash
+g++ -std=c++17 src/*.cpp -o library
+./library input.txt FCFS
+./library input.txt PRIORITY
+```
+
+Results are stored but are not printed yet.

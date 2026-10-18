@@ -22,14 +22,8 @@ class Process {
             // total amount of execution time required by process
             int service_time; // "reader-service interaction"
 
-            // descriptive category class
-            enum class Category{
-                STUDENT,
-                REGULAR,
-                FACULTY,
-                RESEARCHER,
-                STAFF
-            } category;
+            // descriptive category label from the input file
+            std::string category;
         
             /*
             

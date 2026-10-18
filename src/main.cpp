@@ -8,25 +8,36 @@
  * 
  */
 
+#include <iostream>
+#include <string>
 #include <vector>
 
 #include "fcfs.h"
+#include "input.h"
 #include "priority.h"
-#include "process.h"
 
-    
-// scheduling functions go here
+int main(int argc, char* argv[]) {
+    if (argc != 3) {
+        std::cerr << "Usage: " << argv[0] << " INPUT_FILE FCFS|PRIORITY\n";
+        return 1;
+    }
 
-int main(){
+    std::vector<Process> processes = read_input(argv[1]);
+    if (processes.empty()) {
+        return 1;
+    }
 
-    std::vector<Process> processes;
+    std::string algorithm = argv[2];
+    std::vector<ProcessResult> results;
 
-    // NOTE(!)
-    // this is how you would add a process to the vector:
-    // either input the details, make the obj and then pass it
-    // or just pass the details directly to the constructor like so:
-    processes.push_back(Process{"R1", 0, 1, 5, Process::Category::STUDENT, Process::State::NEW}); // R1 is reader 1.. or process id R1
+    if (algorithm == "FCFS") {
+        results = fcfs(processes);
+    } else if (algorithm == "PRIORITY") {
+        results = priority_schedule(processes);
+    } else {
+        std::cerr << "Choose FCFS or PRIORITY.\n";
+        return 1;
+    }
 
-    std::vector<ProcessResult> results = fcfs(processes);
     return 0;
 }
