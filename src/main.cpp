@@ -14,6 +14,8 @@
 
 #include "fcfs.h"
 #include "input.h"
+#include "metrics.h"
+#include "output.h"
 #include "priority.h"
 
 int main(int argc, char* argv[]) {
@@ -38,6 +40,10 @@ int main(int argc, char* argv[]) {
         std::cerr << "Choose FCFS or PRIORITY.\n";
         return 1;
     }
+
+    std::vector<ProcessMetrics> metrics = compute_process_metrics(results);
+    SummaryMetrics summary = compute_summary_metrics(metrics);
+    print_results(std::cout, metrics, summary);
 
     return 0;
 }
